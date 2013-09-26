@@ -1,0 +1,9 @@
+Package: paternity
+Type: Package
+Title: Paternity tests using SNPs
+Version: 1.0
+Date: 2013-05-15
+Author: Umesh Rosyara 
+Maintainer: Umesh Rosyara <rosyaraur@gmail.com> 
+Description: The package include function to calculate composite paterity index for paternity testing 
+License: GPL (>= 2)
