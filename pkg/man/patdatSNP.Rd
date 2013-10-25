@@ -13,10 +13,10 @@ paternity index.
   A data frame with 39 observations on the following 20 variables.
   \describe{
     \item{\code{SNPname}}{Name of SNP markers}
-    \item{\code{afeq}}{A alelle frequency}
-    \item{\code{bfeq}}{B allele frequency}
+    \item{\code{a}}{A alelle frequency}
+    \item{\code{b}}{B allele frequency}
     \item{\code{Child}}{SNP marker scores for individual named Child (AA, AB, BB)}
-    \item{\code{TrueMother}}{SNP marker scores (AA, AB, BB)}
+    \item{\code{Mother}}{SNP marker scores (AA, AB, BB)}
     \item{\code{AFather1}}{SNP marker scores (AA, AB, BB)}
     \item{\code{AFather2}}{SNP marker scores (AA, AB, BB)}
     \item{\code{AFather3}}{SNP marker scores (AA, AB, BB)}
@@ -26,12 +26,7 @@ paternity index.
     \item{\code{AFather7}}{SNP marker scores (AA, AB, BB)}
     \item{\code{AFather8}}{SNP marker scores (AA, AB, BB)}
     \item{\code{AFather9}}{SNP marker scores (AA, AB, BB)}
-    \item{\code{AFather10}}{SNP marker scores (AA, AB, BB)}
-    \item{\code{AFather11}}{SNP marker scores (AA, AB, BB)}
-    \item{\code{AFather12}}{SNP marker scores (AA, AB, BB)}
-    \item{\code{AFather13}}{SNP marker scores (AA, AB, BB)}
-    \item{\code{AFather14}}{SNP marker scores (AA, AB, BB)}
-    \item{\code{AFather15}}{SNP marker scores (AA, AB, BB)}
+    
     }
 }
 \source{
@@ -46,15 +41,22 @@ of descendants using SNP markers
 }
 \examples{
 data(patdatSNP)
- pind <- paternityIndex (dataframe =patdatSNP , marker = "SNPname", 
- mother = "TrueMother",  child = "Child", AF = "AFather1", Afreq = "afeq", 
- Bfreq = "bfeq", afcalcol = NA)
+ pind <- paternityIndex (dataframe =patdatSNP , marker = "SNPmarker", 
+ mother = "Mother",  child = "Child", AF = "AFather1", Afreq = "a", 
+ Bfreq = "b", afcalcol = NA)
  # log composite paternity index 
  log(prod(pind$PI))
  
+ # second case for AFather2 
+  pind1 <- paternityIndex (dataframe =patdatSNP , marker = "SNPmarker", 
+ mother = "Mother",  child = "Child", AF = "AFather2", Afreq = "a", 
+ Bfreq = "b", afcalcol = NA)
+ # log composite paternity index 
+ log(prod(pind1$PI))
+ 
  # allele calculated from the dataset provided in columns afcalcol
 pind1 <- paternityIndex (dataframe =patdatSNP , marker = "SNPname", 
-mother = "TrueMother", child = "Child", AF = "AFather1", Afreq = "calculate",
+mother = "Mother", child = "Child", AF = "AFather1", Afreq = "calculate",
  Bfreq = "calculate", afcalcol = 4:20)
   
 }

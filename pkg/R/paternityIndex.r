@@ -43,7 +43,8 @@ alldata = data.frame(marker = dataframe [, marker], mother = dataframe [, mother
 AF = dataframe [ , AF], a = dataframe [, Afreq], b=dataframe [, Bfreq], stringsAsFactors=FALSE)
 }
 # conditions dataframe
-mother <-  c("AA", "AA",  "AB",  "AB",   "BB",  "AA", "AA",  "AA",   "AA",     "AB",    "AB",     "BB",        "AA",  "AA",  "AA", "AA", "AB",  "AB",      "BB",   "AA",    "AA")
+              #1     2      3      4       5      6     7      8       9         10        11       12            13    14      15    16   17      18        19     20        21
+mother <-  c("AA", "AA",  "AB",  "AB",   "BB",  "BB", "AB",  "AA",   "AA",     "AB",    "AB",     "BB",        "BB",  "AB",  "AA", "AA", "AB",  "AB",      "BB",   "BB",    "AB")
 child <-   c("AA",  "AB", "AA",  "AB",   "BB",  "AB", "BB",  "AA",   "AB",     "AA",   "AB",       "BB",      "AB",   "BB",  "AA", "AB", "AA",  "AB",     "BB",    "AB",   "BB")
 AF <-      c("AA",  "AA",  "AA", "AA",   "AA",  "AA",  "AA", "AB",   "AB",     "AB",    "AB",      "AB",      "AB",   "AB",  "BB", "BB",  "BB",  "BB",    "BB",     "BB",   "BB")
 Formula <- c("1/a","1/b", "1/a", "1/(a+b)",0,  "1/a",   0,  "0.5/a",  "0.5/a", "0.5/a", "1/(a+b)", "0.5 / b", "0.5/a", "0.5/b",0, "1/b",   0,    "1/(a+b)","1/b",   "1/b",  "1/b")
