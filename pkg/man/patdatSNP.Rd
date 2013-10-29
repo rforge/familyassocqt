@@ -12,7 +12,8 @@ paternity index.
 \format{
   A data frame with 39 observations on the following 20 variables.
   \describe{
-    \item{\code{SNPname}}{Name of SNP markers}
+    \item{\code{SNPmarker}}{Name of SNP markers}
+    \item{\code{Chr}}{Chromsome where SNP is located}
     \item{\code{a}}{A alelle frequency}
     \item{\code{b}}{B allele frequency}
     \item{\code{Child}}{SNP marker scores for individual named Child (AA, AB, BB)}
