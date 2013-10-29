@@ -47,5 +47,5 @@ data(patdatSNP)
  # allele calculated from the dataset provided in columns afcalcol
 pind1 <- paternityIndex (dataframe =patdatSNP , marker = "SNPname", 
 mother = "TrueMother", child = "Child", AF = "AFather1", Afreq = "calculate",
- Bfreq = "calculate", afcalcol = 4:20)
+ Bfreq = "calculate", afcalcol = 4:15)
 }
