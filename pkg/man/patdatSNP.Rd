@@ -56,9 +56,10 @@ data(patdatSNP)
  log(prod(pind1$PI))
  
  # allele calculated from the dataset provided in columns afcalcol
-pind1 <- paternityIndex (dataframe =patdatSNP , marker = "SNPname", 
+pind2 <- paternityIndex (dataframe =patdatSNP , marker = "SNPmarker", 
 mother = "Mother", child = "Child", AF = "AFather1", Afreq = "calculate",
  Bfreq = "calculate", afcalcol = 4:15)
+  log(prod(pind2$PI))
   
 }
 \keyword{datasets}

@@ -38,14 +38,15 @@ Evett, I.W., and B.S. Weir.1998. Interpreting DNA evidence. Sunderland,
 
 \examples{
 data(patdatSNP)
- pind <- paternityIndex (dataframe =patdatSNP , marker = "SNPname", 
- mother = "TrueMother",  child = "Child", AF = "AFather1", Afreq = "afeq", 
- Bfreq = "bfeq", afcalcol = NA)
+ pind <- paternityIndex (dataframe =patdatSNP , marker = "SNPmarker", 
+ mother = "Mother", child = "Child", AF = "AFather1", Afreq = "a",
+  Bfreq = "b", afcalcol = NA)
  # log composite paternity index 
  log(prod(pind$PI))
  
  # allele calculated from the dataset provided in columns afcalcol
-pind1 <- paternityIndex (dataframe =patdatSNP , marker = "SNPname", 
-mother = "TrueMother", child = "Child", AF = "AFather1", Afreq = "calculate",
+pind1 <- paternityIndex (dataframe =patdatSNP , marker = "SNPmarker", 
+mother = "Mother",  child = "Child", AF = "AFather1", Afreq = "calculate",
  Bfreq = "calculate", afcalcol = 4:15)
+  log(prod(pind1$PI)) 
 }
