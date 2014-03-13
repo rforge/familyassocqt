@@ -47,10 +47,10 @@ AF = dataframe [ , AF], a = dataframe [, Afreq], b=dataframe [, Bfreq], stringsA
 mother <-  c("AA", "AA",  "AB",  "AB",   "BB",  "BB", "AB",  "AA",   "AA",     "AB",    "AB",     "BB",        "BB",  "AB",  "AA", "AA", "AB",  "AB",      "BB",   "BB",    "AB")
 child <-   c("AA",  "AB", "AA",  "AB",   "BB",  "AB", "BB",  "AA",   "AB",     "AA",   "AB",       "BB",      "AB",   "BB",  "AA", "AB", "AA",  "AB",     "BB",    "AB",   "BB")
 AF <-      c("AA",  "AA",  "AA", "AA",   "AA",  "AA",  "AA", "AB",   "AB",     "AB",    "AB",      "AB",      "AB",   "AB",  "BB", "BB",  "BB",  "BB",    "BB",     "BB",   "BB")
-Formula <- c("1/a","1/b", "1/a", "1/(a+b)",0,  "1/a",   0,  "0.5/a",  "0.5/a", "0.5/a", "1/(a+b)", "0.5 / b", "0.5/a", "0.5/b",0, "1/b",   0,    "1/(a+b)","1/b",   "1/b",  "1/b")
+Formula <- c("1/a",0, "1/a", "1/(a+b)",0,  "1/a",   0,  "0.5/a",  "0.5/a", "0.5/a", "1/(a+b)", "0.5 / b", "0.5/a", "0.5/b",0, "1/b",   0,    "1/(a+b)","1/b",          0,  "1/b")
 COEFA <-    c(1,    0,      1,     0,     0,     1,     0,   0.5,     0.5,      0.5,      0,        0,         0.5,     0,     0,   0,     0,      0,       0,         0,     0)
 COEFAB <-   c(0,    0,      0,     1,     0,     0,     0,    0,       0,        0,       1,        0,         0,       0,     0,   0,     0,       1,      0,         0,     0)
-COEFB <-    c(0,    1,      0,     0,     0,     0,     0,    0,       0,        0,       0,        0.5,       0,       0.5,    0,  1,     0,       0,      1,         1,     1)
+COEFB <-    c(0,    0,      0,     0,     0,     0,     0,    0,       0,        0,       0,        0.5,       0,       0.5,    0,  1,     0,       0,      1,         0,     1)
 coefft <- data.frame (mother, child, AF, Formula,COEFA, COEFAB,COEFB)
 
 # create conditions data frame
